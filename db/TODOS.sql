@@ -54,3 +54,13 @@ CREATE TABLE sozial_leben (
     FOREIGN KEY (haustiere_id) REFERENCES haustiere(id), 
     FOREIGN KEY (partner_id) REFERENCES partner(id) 
 ); 
+
+CREATE TABLE Spielart ( 
+    id INT AUTO_INCREMENT PRIMARY KEY, 
+    farmlayout_id INT NOT NULL, 
+    mastery_id INT NOT NULL, 
+    geldverdienen_id INT NOT NULL,
+    FOREIGN KEY (haustiere_id) REFERENCES haustiere(id), 
+    FOREIGN KEY (partner_id) REFERENCES partner(id) 
+); 
+
