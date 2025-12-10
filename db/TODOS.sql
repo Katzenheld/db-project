@@ -60,7 +60,8 @@ CREATE TABLE Spielart (
     farmlayout_id INT NOT NULL, 
     mastery_id INT NOT NULL, 
     geldverdienen_id INT NOT NULL,
-    FOREIGN KEY (haustiere_id) REFERENCES haustiere(id), 
-    FOREIGN KEY (partner_id) REFERENCES partner(id) 
+    FOREIGN KEY (farmlayout_id) REFERENCES farmlayout(id), 
+    FOREIGN KEY (mastery_id) REFERENCES mastery(id) 
+    FOREIGN KEY (geldverdienen_id) REFERENCES geldverdienen(id)
 ); 
 
