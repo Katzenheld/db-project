@@ -61,7 +61,7 @@ CREATE TABLE Spielart (
     mastery_id INT NOT NULL, 
     geldverdienen_id INT NOT NULL,
     FOREIGN KEY (farmlayout_id) REFERENCES farmlayout(id), 
-    FOREIGN KEY (mastery_id) REFERENCES mastery(id) 
+    FOREIGN KEY (mastery_id) REFERENCES mastery(id), 
     FOREIGN KEY (geldverdienen_id) REFERENCES geldverdienen(id)
 ); 
 
