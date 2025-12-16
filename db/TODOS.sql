@@ -6,10 +6,10 @@ CREATE TABLE users (
 
 CREATE TABLE todos (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT NOT NULL,
+    users_id INT NOT NULL,
     content VARCHAR(100),
     due DATETIME,
-    FOREIGN KEY (user_id) REFERENCES users(id)
+    FOREIGN KEY (users_id) REFERENCES users(id)
 );
 
 CREATE TABLE mastery(
@@ -28,7 +28,7 @@ CREATE TABLE geldverdienen(
 
 CREATE TABLE farmlayout(
     id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
+    art VARCHAR(100) NOT NULL,
     zweck VARCHAR(100) NOT NULL,
     vorteile VARCHAR(250) NOT NULL,
     nachteile VARCHAR(20) NOT NULL
