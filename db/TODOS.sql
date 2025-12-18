@@ -53,6 +53,11 @@ CREATE TABLE partnerin(
     hate_gift VARCHAR(20) NOT NULL
 );
 
+CREATE TABLE antwort (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    frage_ant INT NOT NULL
+);
+
 
 CREATE TABLE sozial_leben ( 
     id INT AUTO_INCREMENT PRIMARY KEY, 
