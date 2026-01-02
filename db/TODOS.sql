@@ -12,69 +12,34 @@ CREATE TABLE todos (
     FOREIGN KEY (users_id) REFERENCES users(id)
 );
 
-CREATE TABLE mastery(
+CREATE TABLE frage_1(
     id INT AUTO_INCREMENT PRIMARY KEY,
     namen VARCHAR(100) NOT NULL,
-    vorteile VARCHAR(100) NOT NULL,
-    nachteile VARCHAR(250) NOT NULL
 );
 
-CREATE TABLE geldverdienen(
+CREATE TABLE frage_2(
+    id INT AUTo_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOZ NULL,
+);
+
+CREATE TABLE frage_3(
     id INT AUTO_INCREMENT PRIMARY KEY,
-    art VARCHAR(100) NOT NULL,
-    vorteile VARCHAR(100) NOT NULL,
-    nachteile VARCHAR(250) NOT NULL
+    name VARCHAR(100) NOT NULL,
 );
 
-CREATE TABLE farmlayout(
+CREATE TABLE frage_4(
     id INT AUTO_INCREMENT PRIMARY KEY,
-    art VARCHAR(100) NOT NULL,
-    zweck VARCHAR(100) NOT NULL,
-    vorteile VARCHAR(250) NOT NULL,
-    nachteile VARCHAR(20) NOT NULL
+    tierart VARCHAR(100) NOT NULL,
 );
 
-CREATE TABLE haustiere(
+CREATE TABLE frage_5(
     id INT AUTO_INCREMENT PRIMARY KEY,
-    tierart VARCHAR(100) NOT NULL
+    name VARCHAR(100) NOT NULL,
 );
 
-CREATE TABLE partner(
+CREATE TABLE frage_6(
     id INT AUTO_INCREMENT PRIMARY KEY,
-    vorname VARCHAR(100) NOT NULL,
-    love_gift VARCHAR(250) NOT NULL,
-    hate_gift VARCHAR(20) NOT NULL
+    name VARCHAR(100) NOT NULL,
+    
 );
-
-CREATE TABLE partnerin(
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    vorname VARCHAR(100) NOT NULL,
-    love_gift VARCHAR(250) NOT NULL,
-    hate_gift VARCHAR(20) NOT NULL
-);
-
-CREATE TABLE antwort (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    frage_ant INT NOT NULL
-);
-
-
-CREATE TABLE sozial_leben ( 
-    id INT AUTO_INCREMENT PRIMARY KEY, 
-    haustiere_id INT NOT NULL, 
-    partner_id INT NOT NULL, 
-    FOREIGN KEY (haustiere_id) REFERENCES haustiere(id), 
-    FOREIGN KEY (partner_id) REFERENCES partner(id), 
-    FOREIGN KEY (partnerin_id) REFERENCES partnerin(id) 
-); 
-
-CREATE TABLE Spielart ( 
-    id INT AUTO_INCREMENT PRIMARY KEY, 
-    farmlayout_id INT NOT NULL, 
-    mastery_id INT NOT NULL, 
-    geldverdienen_id INT NOT NULL,
-    FOREIGN KEY (farmlayout_id) REFERENCES farmlayout(id), 
-    FOREIGN KEY (mastery_id) REFERENCES mastery(id), 
-    FOREIGN KEY (geldverdienen_id) REFERENCES geldverdienen(id)
-); 
 
